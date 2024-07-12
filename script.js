@@ -44,3 +44,33 @@ function getHumanChoice(){
 
 let humanScore = 0;
 let computerScore = 0;
+
+function playRound(humanChoice,computerChoice){
+    if(humanChoice == "Rock" && computerChoice == "Scissors"){
+        console.log("You won! Rock beats Scissors")
+        humanScore++;
+    }
+    else if(humanChoice == "Rock" && computerChoice == "Paper"){
+        console.log("You lose! Paper beats Rock")
+        computerScore++;
+    }
+    else if(humanChoice == "Paper" && computerChoice == "Scissors"){
+        console.log("You lose! Scissors beats Paper")
+        computerScore++;
+    }
+    else if(humanChoice == "Paper" && computerChoice == "Rock"){
+        console.log("You won! Paper beats Rock")
+        humanScore++;
+    }
+    else if(humanChoice == "Scissors" && computerChoice == "Rock"){
+        console.log("You lose! Rock beats Scissors")
+        computerScore++;
+    }
+    else if(humanChoice == "Scissors" && computerChoice == "Paper"){
+        console.log("You won! Scissors beats Paper")
+        humanScore++;
+    }
+    else{
+        console.log("It was a draw!")
+    }
+}
