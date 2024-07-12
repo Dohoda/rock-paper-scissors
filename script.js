@@ -36,7 +36,7 @@ function getHumanChoice(){
             i++;
         }
         else {
-            alert("Invalid input. Please enter the input with all lower or upper case.");
+            alert("ERROR");
         }
     }
 
