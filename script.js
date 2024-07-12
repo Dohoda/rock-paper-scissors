@@ -21,16 +21,17 @@ function getHumanChoice(){
 
     for(let i = 0; i < 1;){
         choice = prompt("Rock, Paper, or Scissors?" ,"ROCK");
+        choice = choice.toLowerCase();
 
-        if(choice == "ROCK" || choice == "rock"){
+        if(choice == "rock"){
             return "Rock"
             i++;
         }
-        else if(choice == "PAPER" || choice == "paper"){
+        else if(choice == "paper"){
             return "Paper"
             i++;
         }
-        else if(choice == "SCISSORS" || choice == "scissors"){
+        else if(choice == "scissors"){
             return "Scissors"
             i++;
         }
