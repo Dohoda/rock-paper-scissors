@@ -37,10 +37,6 @@ button{
     flex-direction: column;
     justify-content: space-evenly;
     margin-left: 20px;
-}
-
-.game-ui .bottom{
-    background: red;
-    display: flex;
-    height: 200px;
+    padding: 6px;
+    width: 35%;
 }
