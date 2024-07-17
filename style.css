@@ -31,3 +31,10 @@ button{
     padding: 4px;
     display: flex;
 }
+
+.left-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 20px;
+}
