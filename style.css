@@ -47,3 +47,10 @@ button{
     align-items: center;
     flex-grow: 1;
 }
+
+.text{
+    color: #E7E5EB;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: underline;
+}
