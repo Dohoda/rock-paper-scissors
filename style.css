@@ -12,6 +12,18 @@ body {
     margin: 0;
 }
 
+button{
+    width: 150px;
+    height: 75px;
+    background-color: rgba(89, 29, 145, 0.741);
+    color: #E7E5EB;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+    border: 3px solid #1F2937;
+    border-radius: 15%;
+}
+
 .game-ui{
     background-color: #d9dbde;
     height: 80%;
