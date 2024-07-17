@@ -1,5 +1,21 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
 body {
     background-color: #1F2937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-ui{
+    background-color: #d9dbde;
+    height: 80%;
+    width: 80%;
     padding: 4px;
     display: flex;
 }
