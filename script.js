@@ -16,62 +16,40 @@ function getComputerChoice(){
     }
 }
 
-function getHumanChoice(){
-    let choice;
-
-    for(let i = 0; i < 1;){
-        choice = prompt("Rock, Paper, or Scissors?" ,"ROCK");
-        choice = choice.toLowerCase();
-
-        if(choice == "rock"){
-            return "Rock"
-            i++;
-        }
-        else if(choice == "paper"){
-            return "Paper"
-            i++;
-        }
-        else if(choice == "scissors"){
-            return "Scissors"
-            i++;
-        }
-        else {
-            alert("ERROR");
-        }
-    }
-
-    return choice;
-}
-
 let humanScore = 0;
 let computerScore = 0;
 
-function playRound(humanChoice,computerChoice){
+function playRound(humanChoice){
+
+    let computerChoice = getComputerChoice();
+
     if(humanChoice == "Rock" && computerChoice == "Scissors"){
-        console.log("You won! Rock beats Scissors")
+        console.log("You won! Rock beats Scissors");
         humanScore++;
     }
     else if(humanChoice == "Rock" && computerChoice == "Paper"){
-        console.log("You lose! Paper beats Rock")
+        console.log("You lose! Paper beats Rock");
         computerScore++;
     }
     else if(humanChoice == "Paper" && computerChoice == "Scissors"){
-        console.log("You lose! Scissors beats Paper")
+        console.log("You lose! Scissors beats Paper");
         computerScore++;
     }
     else if(humanChoice == "Paper" && computerChoice == "Rock"){
-        console.log("You won! Paper beats Rock")
+        console.log("You won! Paper beats Rock");
         humanScore++;
     }
     else if(humanChoice == "Scissors" && computerChoice == "Rock"){
-        console.log("You lose! Rock beats Scissors")
+        console.log("You lose! Rock beats Scissors");
         computerScore++;
     }
     else if(humanChoice == "Scissors" && computerChoice == "Paper"){
-        console.log("You won! Scissors beats Paper")
+        console.log("You won! Scissors beats Paper");
         humanScore++;
     }
     else{
         console.log("It was a draw!")
     }
 }
+
+
