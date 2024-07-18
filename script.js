@@ -52,4 +52,10 @@ function playRound(humanChoice){
     }
 }
 
+const btnRock = document.querySelector("#rock");
+btnRock.addEventListener("click", function() {playRound("Rock");});
+const btnPaper = document.querySelector("#paper");
+btnPaper.addEventListener("click", function() {playRound("Paper");});
+const btnScissors = document.querySelector("#scissors");
+btnScissors.addEventListener("click", function() {playRound("Scissors");});
 
