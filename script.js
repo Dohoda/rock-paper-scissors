@@ -22,7 +22,7 @@ let computerScore = 0;
 function playRound(humanChoice){
 
     let computerChoice = getComputerChoice();
-    let roundCount = 0;
+    let roundCount = 1;
 
     const gameRight = document.querySelector(".game-right");
     const gameLeft = document.querySelector(".game-left");
@@ -64,7 +64,7 @@ function playRound(humanChoice){
         humanScore++;
     }
     else{
-        
+        roundCount++;
     }
 }
 
