@@ -43,8 +43,7 @@ button{
 .right-side{
     background-color: #1F2937;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
     flex-grow: 1;
 }
 
