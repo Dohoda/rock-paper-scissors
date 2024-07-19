@@ -29,9 +29,13 @@ function playRound(humanChoice){
 
     const computerResult = document.createElement("p");
     computerResult.style.color = "red";
+    computerResult.style.fontSize = "18px";
+    computerResult.style.fontWeight = "600";
 
     const humanResult = document.createElement("p");
     humanResult.style.color = "blue";
+    humanResult.style.fontSize = "18px";
+    humanResult.style.fontWeight = "600";
 
     const gameResult = document.createElement("p");
 
@@ -90,7 +94,7 @@ function playRound(humanChoice){
 
         gameLeft.appendChild(humanResult);
         gameRight.appendChild(computerResult);
-        
+
         roundCount++;
         humanScore++;
     }
