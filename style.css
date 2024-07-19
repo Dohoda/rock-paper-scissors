@@ -47,6 +47,12 @@ button{
     flex-grow: 1;
 }
 
+#player-text , #computer-text{
+    font-size: 20px;
+    font-weight: 600;
+    color: #E7E5EB;
+}
+
 .text{
     color: #E7E5EB;
     font-size: 18px;
