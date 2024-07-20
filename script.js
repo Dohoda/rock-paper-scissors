@@ -16,6 +16,18 @@ function getComputerChoice(){
     }
 }
 
+function playRock(){
+    playRound("Rock");
+}
+
+function playPaper(){
+    playRound("Paper");
+}
+
+function playScissors(){
+    playRound("Scissors");
+}
+
 let humanScore = 0;
 let computerScore = 0;
 let roundCount = 0;
@@ -102,7 +114,7 @@ function playRound(humanChoice){
 
         gameLeft.appendChild(humanResult);
         gameRight.appendChild(computerResult);
-        
+
         roundCount++;
     }
 
@@ -122,11 +134,11 @@ function playRound(humanChoice){
 }
 
 const btnRock = document.querySelector("#rock");
-btnRock.addEventListener("click", function() {playRound("Rock");});
+btnRock.addEventListener("click",playRock);
 
 const btnPaper = document.querySelector("#paper");
-btnPaper.addEventListener("click", function() {playRound("Paper");});
+btnPaper.addEventListener("click",playPaper);
 
 const btnScissors = document.querySelector("#scissors");
-btnScissors.addEventListener("click", function() {playRound("Scissors");});
+btnScissors.addEventListener("click",playScissors);
 
