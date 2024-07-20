@@ -32,6 +32,8 @@ let humanScore = 0;
 let computerScore = 0;
 let roundCount = 0;
 
+const roundCounter = document.querySelector("#round-counter");
+
 function playRound(humanChoice){
 
     let computerChoice = getComputerChoice();
@@ -139,7 +141,10 @@ function playRound(humanChoice){
             btnPaper.removeEventListener("click",playPaper);
             btnScissors.removeEventListener("click",playScissors);
         }
+        roundCounter.textContent = "Round: " + roundCount;
     }
+
+    roundCounter.textContent = "Round: " + roundCount;
 }
 
 const btnRock = document.querySelector("#rock");
