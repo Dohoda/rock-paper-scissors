@@ -18,11 +18,11 @@ function getComputerChoice(){
 
 let humanScore = 0;
 let computerScore = 0;
+let roundCount = 0;
 
 function playRound(humanChoice){
 
     let computerChoice = getComputerChoice();
-    let roundCount = 0;
 
     const gameRight = document.querySelector(".game-right");
     const gameLeft = document.querySelector(".game-left");
@@ -36,8 +36,6 @@ function playRound(humanChoice){
     humanResult.style.color = "blue";
     humanResult.style.fontSize = "18px";
     humanResult.style.fontWeight = "600";
-
-    const gameResult = document.createElement("p");
 
     if(humanChoice == "Rock" && computerChoice == "Scissors"){
         humanResult.textContent = "You selected Rock!";
@@ -100,6 +98,20 @@ function playRound(humanChoice){
     }
     else{
         roundCount++;
+    }
+
+    const gameResult = document.querySelector("#game-result-text");
+
+    if(roundCount == 5){
+        if(humanScore > computerScore){
+            gameResult.textContent = "You Won! with your " + humanScore +" score against their " + computerScore + ".";
+        }
+        else if(humanScore < computerScore){
+            gameResult.textContent = "You Lost! with your " + humanScore +" score against their " + computerScore + ".";
+        }
+        else{
+            gameResult.textContent = "It is a Draw! with your " + humanScore +" score against their " + computerScore + ".";
+        }
     }
 }
 
