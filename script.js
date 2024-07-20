@@ -22,7 +22,7 @@ let computerScore = 0;
 function playRound(humanChoice){
 
     let computerChoice = getComputerChoice();
-    let roundCount = 1;
+    let roundCount = 0;
 
     const gameRight = document.querySelector(".game-right");
     const gameLeft = document.querySelector(".game-left");
@@ -39,68 +39,72 @@ function playRound(humanChoice){
 
     const gameResult = document.createElement("p");
 
-    if(humanChoice == "Rock" && computerChoice == "Scissors"){
-        humanResult.textContent = "You selected Rock!";
-        computerResult.textContent = "Computer selected Scissors!";
-
-        gameLeft.appendChild(humanResult);
-        gameRight.appendChild(computerResult);
-
-        roundCount++;
-        humanScore++;
+    for(let i = 0; i < 6; i++){
+        if(humanChoice == "Rock" && computerChoice == "Scissors"){
+            humanResult.textContent = "You selected Rock!";
+            computerResult.textContent = "Computer selected Scissors!";
+    
+            gameLeft.appendChild(humanResult);
+            gameRight.appendChild(computerResult);
+    
+            roundCount++;
+            humanScore++;
+        }
+        else if(humanChoice == "Rock" && computerChoice == "Paper"){
+            humanResult.textContent = "You selected Rock!";
+            computerResult.textContent = "Computer selected Paper!";
+    
+            gameLeft.appendChild(humanResult);
+            gameRight.appendChild(computerResult);
+            roundCount++;
+            computerScore++;
+        }
+        else if(humanChoice == "Paper" && computerChoice == "Scissors"){
+            humanResult.textContent = "You selected Paper!";
+            computerResult.textContent = "Computer selected Scissors!";
+    
+            gameLeft.appendChild(humanResult);
+            gameRight.appendChild(computerResult);
+    
+            roundCount++;
+            computerScore++;
+        }
+        else if(humanChoice == "Paper" && computerChoice == "Rock"){
+            humanResult.textContent = "You selected Paper!";
+            computerResult.textContent = "Computer selected Rock!";
+    
+            gameLeft.appendChild(humanResult);
+            gameRight.appendChild(computerResult);
+    
+            roundCount++;
+            humanScore++;
+        }
+        else if(humanChoice == "Scissors" && computerChoice == "Rock"){
+            humanResult.textContent = "You selected Scissors!";
+            computerResult.textContent = "Computer selected Rock!";
+    
+            gameLeft.appendChild(humanResult);
+            gameRight.appendChild(computerResult);
+    
+            roundCount++;
+            computerScore++;
+        }
+        else if(humanChoice == "Scissors" && computerChoice == "Paper"){
+            humanResult.textContent = "You selected Scissors!";
+            computerResult.textContent = "Computer selected Paper!";
+    
+            gameLeft.appendChild(humanResult);
+            gameRight.appendChild(computerResult);
+    
+            roundCount++;
+            humanScore++;
+        }
+        else{
+            roundCount++;
+        }
     }
-    else if(humanChoice == "Rock" && computerChoice == "Paper"){
-        humanResult.textContent = "You selected Rock!";
-        computerResult.textContent = "Computer selected Paper!";
 
-        gameLeft.appendChild(humanResult);
-        gameRight.appendChild(computerResult);
-        roundCount++;
-        computerScore++;
-    }
-    else if(humanChoice == "Paper" && computerChoice == "Scissors"){
-        humanResult.textContent = "You selected Paper!";
-        computerResult.textContent = "Computer selected Scissors!";
-
-        gameLeft.appendChild(humanResult);
-        gameRight.appendChild(computerResult);
-
-        roundCount++;
-        computerScore++;
-    }
-    else if(humanChoice == "Paper" && computerChoice == "Rock"){
-        humanResult.textContent = "You selected Paper!";
-        computerResult.textContent = "Computer selected Rock!";
-
-        gameLeft.appendChild(humanResult);
-        gameRight.appendChild(computerResult);
-
-        roundCount++;
-        humanScore++;
-    }
-    else if(humanChoice == "Scissors" && computerChoice == "Rock"){
-        humanResult.textContent = "You selected Scissors!";
-        computerResult.textContent = "Computer selected Rock!";
-
-        gameLeft.appendChild(humanResult);
-        gameRight.appendChild(computerResult);
-
-        roundCount++;
-        computerScore++;
-    }
-    else if(humanChoice == "Scissors" && computerChoice == "Paper"){
-        humanResult.textContent = "You selected Scissors!";
-        computerResult.textContent = "Computer selected Paper!";
-
-        gameLeft.appendChild(humanResult);
-        gameRight.appendChild(computerResult);
-
-        roundCount++;
-        humanScore++;
-    }
-    else{
-        roundCount++;
-    }
+    
 }
 
 const btnRock = document.querySelector("#rock");
