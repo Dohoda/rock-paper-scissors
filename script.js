@@ -123,12 +123,21 @@ function playRound(humanChoice){
     if(roundCount == 5){
         if(humanScore > computerScore){
             gameResult.textContent = "You Won! with your " + humanScore +" score against their " + computerScore + ".";
+            btnRock.removeEventListener("click",playRock);
+            btnPaper.removeEventListener("click",playPaper);
+            btnScissors.removeEventListener("click",playScissors);
         }
         else if(humanScore < computerScore){
             gameResult.textContent = "You Lost! with your " + humanScore +" score against their " + computerScore + ".";
+            btnRock.removeEventListener("click",playRock);
+            btnPaper.removeEventListener("click",playPaper);
+            btnScissors.removeEventListener("click",playScissors);
         }
         else{
             gameResult.textContent = "It is a Draw! with your " + humanScore +" score against their " + computerScore + ".";
+            btnRock.removeEventListener("click",playRock);
+            btnPaper.removeEventListener("click",playPaper);
+            btnScissors.removeEventListener("click",playScissors);
         }
     }
 }
