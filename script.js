@@ -97,6 +97,12 @@ function playRound(humanChoice){
         humanScore++;
     }
     else{
+        humanResult.textContent = "You selected " + humanChoice + "!";
+        computerResult.textContent = "Computer selected " + computerChoice + "!"; 
+
+        gameLeft.appendChild(humanResult);
+        gameRight.appendChild(computerResult);
+        
         roundCount++;
     }
 
