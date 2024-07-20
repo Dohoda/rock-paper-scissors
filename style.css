@@ -52,7 +52,7 @@ button{
 .game-left , .game-right {
     display: flex;
     flex-direction: column;
-    height: 70%;
+    height: 85%;
     width: 50%;
 }
 
@@ -60,6 +60,15 @@ button{
     align-items: flex-end;
 }
 
+.game-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #E7E5EB;
+    font-weight: 600;
+    font-size: 20px;
+}
 
 #player-text , #computer-text{
     font-size: 20px;
